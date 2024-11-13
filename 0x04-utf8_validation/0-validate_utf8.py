@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 def validUTF8(data):
+    for byte in data:
+        if byte > 255:
+            return False
+
     number_in_bytes = 0
 
     mask1 = 1 << 7
