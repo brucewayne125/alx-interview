@@ -10,8 +10,6 @@ def validUTF8(data):
     mask2 = 1 << 6
 
     for byte in data:
-        byte = byte & 0xFF
-
         if number_in_bytes == 0:
             if (byte & mask1) == 0:
                 continue
