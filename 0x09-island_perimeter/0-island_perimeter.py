@@ -7,7 +7,7 @@ Module to calculate the perimeter of an island in a grid.
 def island_perimeter(grid):
 
     """
-Calculate the perimeter of the island described in the grid.
+Calculates the perimeter of the island as described.
 
 :param grid: List of list of integers where:
              0 represents water
