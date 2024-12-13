@@ -1,11 +1,27 @@
 #!/usr/bin/python3
+"""
+Maria and Ben are playing a game. Given a set of consecutive integers starting
+from 1 upto including n, they take turns choosing a prime number from the set
+and removing that number and its multiples from the set.
+The player that cannot make a move loses the game.
+"""
 
 
 def isWinner(x, nums):
+    """
+    Determines the winner of each game and returns the overall winner.
+    Args:
+        x (int): Number of rounds.
+        nums (list): List of integers for each round.
+    Returns:
+        str: Name of the player with the most wins, or None if it's a tie."""
     if x < 1 or not nums:
         return None
 
     def eratosthenes(maximus):
+        """
+        Generate a list of primes upto maximus using the Sieve of Eratosthenes.
+        """
         isPrime = [True] * (maximus + 1)
         isPrime[0] = isPrime[1] = False
         for i in range(2, int(maximus**0.5) + 1):
